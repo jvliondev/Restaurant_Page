@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: './src/index.js',
     output: {
         filename: "main.js",
@@ -32,6 +32,7 @@ module.exports = {
     ],
     module: {
         rules: [
+            
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
@@ -44,6 +45,17 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env'],
+                  },
+                },
+              },
+            
         ],
     },
 };
