@@ -35,3 +35,5 @@ function clearContent(){
     content.innerHTML = '';
 }
 loadHome();
+loadMenu();
+loadContact();

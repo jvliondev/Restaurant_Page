@@ -200,6 +200,8 @@ function clearContent() {
   content.innerHTML = '';
 }
 (0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+(0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
+(0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
 
 /***/ }),
 
@@ -18908,7 +18910,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("3b5bf03150c917efc990")
+/******/ 		__webpack_require__.h = () => ("f3531e3ae6de7d3eaf62")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
