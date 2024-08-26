@@ -1,307 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/contact.js":
-/*!************************!*\
-  !*** ./src/contact.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadContact: () => (/* binding */ loadContact)
-/* harmony export */ });
-function loadContact() {
-  // mainContent
-  var mainContent = document.querySelector('#content');
-  //h2 header "Contact Us"
-  var h2HeaderDiv = document.createElement('div');
-  var h2Header = document.createElement('h2');
-  h2HeaderDiv.classList.add('h2HeaderDiv');
-  h2Header.classList.add('h2Header');
-  h2Header.textContent = 'Contact Us';
-  mainContent.appendChild(h2HeaderDiv);
-  h2HeaderDiv.appendChild(h2Header);
-
-  // p with information
-  var contactPDiv = document.createElement('div');
-  var contactP = document.createElement('p');
-  contactPDiv.classList.add('contactPDiv');
-  contactP.innerHTML = 'The Bear <br> Location: Somewhere in Texas <br> Hours: 8am - 12pm Mon - Fri <br> Phone: 888-888-BEAR';
-  mainContent.appendChild(contactPDiv);
-  contactPDiv.appendChild(contactP);
-
-  // form
-  var formDiv = document.createElement('div');
-  var form = document.createElement('form');
-  formDiv.classList.add('formDiv');
-  form.classList.add('form');
-
-  // Set form attributes
-  form.setAttribute('action', '/submit');
-  form.setAttribute('method', 'post');
-
-  // Create input elements
-  var nameLabel = document.createElement('label');
-  nameLabel.setAttribute('for', 'name');
-  nameLabel.textContent = 'Name: ';
-  var nameInput = document.createElement('input');
-  nameInput.setAttribute('type', 'text');
-  nameInput.setAttribute('id', 'name');
-  nameInput.setAttribute('name', 'name');
-  var emailLabel = document.createElement('label');
-  emailLabel.setAttribute('for', 'email');
-  emailLabel.textContent = 'Email: ';
-  var emailInput = document.createElement('input');
-  emailInput.setAttribute('type', 'email');
-  emailInput.setAttribute('id', 'email');
-  emailInput.setAttribute('name', 'email');
-  var Reserve = document.createElement('label');
-  Reserve.textContent = 'Reserve: ';
-  var yesRadio = document.createElement('input');
-  yesRadio.setAttribute('type', 'radio');
-  yesRadio.setAttribute('id', 'yes');
-  yesRadio.setAttribute('name', 'gender');
-  yesRadio.setAttribute('value', 'yes');
-  var yesLabel = document.createElement('label');
-  yesLabel.setAttribute('for', 'yes');
-  yesLabel.textContent = 'yes';
-  var noRadio = document.createElement('input');
-  noRadio.setAttribute('type', 'radio');
-  noRadio.setAttribute('id', 'no');
-  noRadio.setAttribute('name', 'gender');
-  noRadio.setAttribute('value', 'no');
-  var noLabel = document.createElement('label');
-  noLabel.setAttribute('for', 'no');
-  noLabel.textContent = 'no';
-  var subscribeLabel = document.createElement('label');
-  subscribeLabel.setAttribute('for', 'subscribe');
-  subscribeLabel.textContent = 'Subscribe to newsletter: ';
-  var subscribeCheckbox = document.createElement('input');
-  subscribeCheckbox.setAttribute('type', 'checkbox');
-  subscribeCheckbox.setAttribute('id', 'subscribe');
-  subscribeCheckbox.setAttribute('name', 'subscribe');
-  var submitButton = document.createElement('button');
-  submitButton.setAttribute('type', 'submit');
-  submitButton.textContent = 'Submit';
-  submitButton.classList.add('contactSubmit');
-
-  // Append elements to the form
-  form.appendChild(nameLabel);
-  form.appendChild(nameInput);
-  form.appendChild(document.createElement('br'));
-  form.appendChild(emailLabel);
-  form.appendChild(emailInput);
-  form.appendChild(document.createElement('br'));
-  form.appendChild(Reserve);
-  form.appendChild(yesRadio);
-  form.appendChild(yesLabel);
-  form.appendChild(noRadio);
-  form.appendChild(noLabel);
-  form.appendChild(document.createElement('br'));
-  form.appendChild(subscribeLabel);
-  form.appendChild(subscribeCheckbox);
-  form.appendChild(document.createElement('br'));
-  form.appendChild(submitButton);
-
-  // Append form to the formDiv and formDiv to mainContent
-  mainContent.appendChild(formDiv);
-  formDiv.appendChild(form);
-}
-
-/***/ }),
-
-/***/ "./src/home.js":
-/*!*********************!*\
-  !*** ./src/home.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadHome: () => (/* binding */ loadHome)
-/* harmony export */ });
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
-
-function loadHome() {
-  var mainContent = document.querySelector('#content');
-  var createH1Div = document.createElement('div');
-  var h1Slogan = document.createElement('h1');
-  var foodimageDiv = document.createElement('div');
-  var foodimage = document.createElement('div');
-  function clearContent() {
-    var content = document.querySelector('#content');
-    content.innerHTML = '';
-  }
-  createH1Div.classList.add('h1Container');
-  h1Slogan.classList.add('h1Slogan');
-  foodimageDiv.classList.add('foodimageDiv');
-  foodimage.classList.add('foodimage');
-  h1Slogan.textContent = 'Welcome to The Bear!';
-  mainContent.appendChild(createH1Div);
-  createH1Div.appendChild(h1Slogan);
-  mainContent.appendChild(foodimageDiv);
-  foodimageDiv.appendChild(foodimage);
-  document.querySelector('.foodimage').addEventListener('mouseover', function () {
-    setTimeout(function () {
-      clearContent();
-      (0,_menu__WEBPACK_IMPORTED_MODULE_0__.loadMenu)();
-    }, 500); // Delay matches the CSS transition duration
-  });
-}
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
-/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.css */ "./src/home.css");
-/* harmony import */ var _contact_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.css */ "./src/contact.css");
-/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.css */ "./src/menu.css");
-/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
-/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
-/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contact.js */ "./src/contact.js");
-
-
-
-
-
-
-
-
-// Tab Switching Module
-var tabSwitchingModule = function () {
-  var homeTab = document.querySelector(".home");
-  homeTab.addEventListener("click", function () {
-    clearContent();
-    (0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
-  });
-  var menuTab = document.querySelector(".menu");
-  menuTab.addEventListener("click", function () {
-    clearContent();
-    (0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
-  });
-  var contactTab = document.querySelector(".contact");
-  contactTab.addEventListener("click", function () {
-    clearContent();
-    (0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
-  });
-}();
-function clearContent() {
-  var content = document.querySelector('#content');
-  content.innerHTML = '';
-}
-(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
-(0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
-(0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
-
-/***/ }),
-
-/***/ "./src/menu.js":
-/*!*********************!*\
-  !*** ./src/menu.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadMenu: () => (/* binding */ loadMenu)
-/* harmony export */ });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
-function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-
-var images = __webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$");
-function loadMenu() {
-  var menuContainer = document.createElement('div');
-  menuContainer.classList.add('menuContainer');
-  var content1 = document.getElementById('content');
-  content1.appendChild(menuContainer);
-  var MenuItem = /*#__PURE__*/function () {
-    function MenuItem(imageSrc, title, description, calories, rating) {
-      _classCallCheck(this, MenuItem);
-      this.imageSrc = imageSrc;
-      this.title = title;
-      this.description = description;
-      this.calories = calories;
-      this.rating = rating;
-    }
-    return _createClass(MenuItem, [{
-      key: "createMenuItem",
-      value: function createMenuItem() {
-        var menuItem = document.createElement('div');
-        menuItem.classList.add('menu-item');
-        var imageDiv = document.createElement('div');
-        imageDiv.classList.add('image');
-        imageDiv.style.backgroundImage = "url(".concat(this.imageSrc, ")");
-        menuItem.appendChild(imageDiv);
-        var backgroundDiv = document.createElement('div');
-        backgroundDiv.classList.add('background');
-        var titleDiv = document.createElement('div');
-        var titleElement = document.createElement('h3');
-        titleElement.textContent = this.title;
-        titleElement.classList.add('menuTitle');
-        titleDiv.appendChild(titleElement);
-        var descriptionDiv = document.createElement('div');
-        var descriptionElement = document.createElement('p');
-        descriptionElement.textContent = this.description;
-        descriptionElement.classList.add('menuDescription');
-        descriptionDiv.appendChild(descriptionElement);
-        var titleAndDescriptionDiv = document.createElement('div');
-        titleAndDescriptionDiv.appendChild(titleDiv);
-        titleAndDescriptionDiv.appendChild(descriptionDiv);
-        backgroundDiv.appendChild(titleAndDescriptionDiv);
-        titleAndDescriptionDiv.classList.add('titleAndDescriptionDiv');
-        var borderShadowDiv = document.createElement('div');
-        borderShadowDiv.classList.add('border-shadow');
-        backgroundDiv.appendChild(borderShadowDiv);
-        var ratingCaloriesDiv = document.createElement('div');
-        ratingCaloriesDiv.classList.add('rating-calories');
-        var caloriesElement = document.createElement('span');
-        caloriesElement.classList.add('caloriesText');
-        caloriesElement.textContent = "".concat(this.calories, " calories");
-        var ratingElement = document.createElement('span');
-        ratingElement.classList.add('ratingText');
-        ratingElement.textContent = "\u2B50 ".concat(this.rating);
-        ratingCaloriesDiv.appendChild(caloriesElement);
-        ratingCaloriesDiv.appendChild(ratingElement);
-        backgroundDiv.appendChild(ratingCaloriesDiv);
-        menuItem.appendChild(backgroundDiv);
-        return menuItem;
-      }
-    }]);
-  }();
-  var content = document.getElementById('content');
-  var menuItem1 = new MenuItem(images('./homeFood.png'), 'King Pao Fish', 'Savory & Spicy', 250, 4.5);
-  var menuItem2 = new MenuItem(images('./beefPlate.png'), 'Spring Beef Platoon', 'Tangy and Wild', 700, 4.9);
-  var menuItem3 = new MenuItem(images('./chickenSalad.png'), 'The Michael', 'Unpleasantly Good', 200, 4.0);
-  var menuItem4 = new MenuItem(images('./homeFood.png'), "Sydney's Donut", 'Sweeping Delightful', 300, 4.4);
-  var menuItem5 = new MenuItem(images('./homeFood.png'), 'The Chocolate Banana', 'Suprisingly simple', 800, 4.1);
-  var menuItem6 = new MenuItem(images('./homeFood.png'), "Mikey's Spaghetti", 'Like A Can Of Whoopass', 1300, 5.0);
-  menuContainer.appendChild(menuItem1.createMenuItem());
-  menuContainer.appendChild(menuItem2.createMenuItem());
-  menuContainer.appendChild(menuItem3.createMenuItem());
-  menuContainer.appendChild(menuItem4.createMenuItem());
-  menuContainer.appendChild(menuItem5.createMenuItem());
-  menuContainer.appendChild(menuItem6.createMenuItem());
-}
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/contact.css":
 /*!***************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/contact.css ***!
@@ -18719,6 +18418,188 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ loadContact)
+/* harmony export */ });
+function loadContact() {
+    // mainContent
+    const mainContent = document.querySelector('#content');
+    //h2 header "Contact Us"
+    const h2HeaderDiv = document.createElement('div');
+    const h2Header = document.createElement('h2');
+    h2HeaderDiv.classList.add('h2HeaderDiv');
+    h2Header.classList.add('h2Header');
+    h2Header.textContent = 'Contact Us';
+    mainContent.appendChild(h2HeaderDiv);
+    h2HeaderDiv.appendChild(h2Header);
+
+    
+
+    // p with information
+    const contactPDiv = document.createElement('div');
+    const contactP = document.createElement('p');
+    contactPDiv.classList.add('contactPDiv');
+    contactP.innerHTML = 'The Bear <br> Location: Somewhere in Texas <br> Hours: 8am - 12pm Mon - Fri <br> Phone: 888-888-BEAR';
+    mainContent.appendChild(contactPDiv);
+    contactPDiv.appendChild(contactP);
+
+    // form
+    const formDiv = document.createElement('div');
+    const form = document.createElement('form');
+    formDiv.classList.add('formDiv');
+    form.classList.add('form');
+
+
+    // Set form attributes
+    form.setAttribute('action', '/submit');
+    form.setAttribute('method', 'post');
+
+    // Create input elements
+    const nameLabel = document.createElement('label');
+    nameLabel.setAttribute('for', 'name');
+    nameLabel.textContent = 'Name: ';
+    const nameInput = document.createElement('input');
+    nameInput.setAttribute('type', 'text');
+    nameInput.setAttribute('id', 'name');
+    nameInput.setAttribute('name', 'name');
+
+    const emailLabel = document.createElement('label');
+    emailLabel.setAttribute('for', 'email');
+    emailLabel.textContent = 'Email: ';
+    const emailInput = document.createElement('input');
+    emailInput.setAttribute('type', 'email');
+    emailInput.setAttribute('id', 'email');
+    emailInput.setAttribute('name', 'email');
+
+    const Reserve = document.createElement('label');
+    Reserve.textContent = 'Reserve: ';
+    const yesRadio = document.createElement('input');
+    yesRadio.setAttribute('type', 'radio');
+    yesRadio.setAttribute('id', 'yes');
+    yesRadio.setAttribute('name', 'gender');
+    yesRadio.setAttribute('value', 'yes');
+    const yesLabel = document.createElement('label');
+    yesLabel.setAttribute('for', 'yes');
+    yesLabel.textContent = 'yes';
+
+    const noRadio = document.createElement('input');
+    noRadio.setAttribute('type', 'radio');
+    noRadio.setAttribute('id', 'no');
+    noRadio.setAttribute('name', 'gender');
+    noRadio.setAttribute('value', 'no');
+    const noLabel = document.createElement('label');
+    noLabel.setAttribute('for', 'no');
+    noLabel.textContent = 'no';
+
+    const subscribeLabel = document.createElement('label');
+    subscribeLabel.setAttribute('for', 'subscribe');
+    subscribeLabel.textContent = 'Subscribe to newsletter: ';
+    const subscribeCheckbox = document.createElement('input');
+    subscribeCheckbox.setAttribute('type', 'checkbox');
+    subscribeCheckbox.setAttribute('id', 'subscribe');
+    subscribeCheckbox.setAttribute('name', 'subscribe');
+
+    const submitButton = document.createElement('button');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.textContent = 'Submit';
+    submitButton.classList.add('contactSubmit');
+
+    // Append elements to the form
+    form.appendChild(nameLabel);
+    form.appendChild(nameInput);
+    form.appendChild(document.createElement('br'));
+
+    form.appendChild(emailLabel);
+    form.appendChild(emailInput);
+    form.appendChild(document.createElement('br'));
+
+    form.appendChild(Reserve);
+    form.appendChild(yesRadio);
+    form.appendChild(yesLabel);
+    form.appendChild(noRadio);
+    form.appendChild(noLabel);
+    form.appendChild(document.createElement('br'));
+
+    form.appendChild(subscribeLabel);
+    form.appendChild(subscribeCheckbox);
+    form.appendChild(document.createElement('br'));
+
+    form.appendChild(submitButton);
+
+    // Append form to the formDiv and formDiv to mainContent
+    mainContent.appendChild(formDiv);
+    formDiv.appendChild(form);
+
+}
+
+/***/ }),
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ loadHome)
+/* harmony export */ });
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
+
+
+
+function loadHome() {
+    const mainContent = document.querySelector('#content');
+    const createH1Div = document.createElement('div');
+    const h1Slogan = document.createElement('h1');
+    
+    const foodimageDiv = document.createElement('div');
+    const foodimage = document.createElement('div');
+
+    function clearContent(){
+        const content = document.querySelector('#content');
+        content.innerHTML = '';
+    }
+    
+
+
+    createH1Div.classList.add('h1Container');
+    h1Slogan.classList.add('h1Slogan');
+    foodimageDiv.classList.add('foodimageDiv');
+    foodimage.classList.add('foodimage');
+
+    h1Slogan.textContent = 'Welcome to The Bear!';
+    
+    
+
+    mainContent.appendChild(createH1Div);
+    createH1Div.appendChild(h1Slogan);
+    mainContent.appendChild(foodimageDiv);
+    foodimageDiv.appendChild(foodimage);
+
+    document.querySelector('.foodimage').addEventListener('mouseover', function() {
+        setTimeout(function() {
+            
+            clearContent();
+            (0,_menu__WEBPACK_IMPORTED_MODULE_0__.loadMenu)();
+        }, 500); // Delay matches the CSS transition duration
+      });
+
+
+
+}
+
+/***/ }),
+
 /***/ "./src/images sync \\.(png%7Cjpe?g%7Cgif)$":
 /*!**************************************************************!*\
   !*** ./src/images/ sync nonrecursive \.(png%7Cjpe?g%7Cgif)$ ***!
@@ -18753,6 +18634,170 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/images sync \\.(png%7Cjpe?g%7Cgif)$";
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
+/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.css */ "./src/home.css");
+/* harmony import */ var _contact_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.css */ "./src/contact.css");
+/* harmony import */ var _menu_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.css */ "./src/menu.css");
+/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contact.js */ "./src/contact.js");
+
+
+
+
+
+
+
+
+
+
+
+// Tab Switching Module
+let tabSwitchingModule = (function() {
+    const homeTab = document.querySelector(".home");
+    homeTab.addEventListener("click", ()=> {
+        clearContent();
+        (0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+    });
+    
+    const menuTab = document.querySelector(".menu");
+    menuTab.addEventListener("click", () => {
+        clearContent();
+        (0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
+    });
+
+    const contactTab = document.querySelector(".contact");
+    contactTab.addEventListener("click", () => {
+        clearContent();
+        (0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
+    });
+})();
+
+function clearContent(){
+    const content = document.querySelector('#content');
+    content.innerHTML = '';
+}
+(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+(0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
+(0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ loadMenu)
+/* harmony export */ });
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+
+const images = __webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$");
+
+function loadMenu() {
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menuContainer');
+    const content1 = document.getElementById('content');
+    content1.appendChild(menuContainer);
+
+    class MenuItem {
+        constructor(imageSrc, title, description, calories, rating) {
+            this.imageSrc = imageSrc;
+            this.title = title;
+            this.description = description;
+            this.calories = calories;
+            this.rating = rating;
+        }
+
+        createMenuItem() {
+            const menuItem = document.createElement('div');
+            menuItem.classList.add('menu-item');
+
+        
+
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('image');
+            imageDiv.style.backgroundImage = `url(${this.imageSrc})`;
+            menuItem.appendChild(imageDiv);
+
+            const backgroundDiv = document.createElement('div');
+            backgroundDiv.classList.add('background');
+
+            
+
+            const titleDiv = document.createElement('div');
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = this.title;
+            titleElement.classList.add('menuTitle');
+            titleDiv.appendChild(titleElement);
+            
+
+            const descriptionDiv = document.createElement('div');
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = this.description;
+            descriptionElement.classList.add('menuDescription');
+            descriptionDiv.appendChild(descriptionElement);
+
+            const titleAndDescriptionDiv = document.createElement('div');
+            titleAndDescriptionDiv.appendChild(titleDiv);
+            titleAndDescriptionDiv.appendChild(descriptionDiv);
+            backgroundDiv.appendChild(titleAndDescriptionDiv);
+            titleAndDescriptionDiv.classList.add('titleAndDescriptionDiv');
+            
+
+            const borderShadowDiv = document.createElement('div');
+            borderShadowDiv.classList.add('border-shadow');
+            backgroundDiv.appendChild(borderShadowDiv);
+
+            const ratingCaloriesDiv = document.createElement('div');
+            ratingCaloriesDiv.classList.add('rating-calories');
+            const caloriesElement = document.createElement('span');
+            caloriesElement.classList.add('caloriesText');
+            caloriesElement.textContent = `${this.calories} calories`;
+            const ratingElement = document.createElement('span');
+            ratingElement.classList.add('ratingText');
+            ratingElement.textContent = `⭐ ${this.rating}`;
+            ratingCaloriesDiv.appendChild(caloriesElement);
+            ratingCaloriesDiv.appendChild(ratingElement);
+            backgroundDiv.appendChild(ratingCaloriesDiv);
+
+            menuItem.appendChild(backgroundDiv);
+
+            return menuItem;
+        }
+    }
+
+    const content = document.getElementById('content');
+
+    const menuItem1 = new MenuItem(images('./homeFood.png'), 'King Pao Fish', 'Savory & Spicy', 250, 4.5);
+    const menuItem2 = new MenuItem(images('./beefPlate.png'), 'Spring Beef Platoon', 'Tangy and Wild', 700, 4.9);
+    const menuItem3 = new MenuItem(images('./chickenSalad.png'), 'The Michael', 'Unpleasantly Good', 200, 4.0);
+    const menuItem4 = new MenuItem(images('./homeFood.png'), "Sydney's Donut", 'Sweeping Delightful', 300, 4.4);
+    const menuItem5 = new MenuItem(images('./homeFood.png'), 'The Chocolate Banana', 'Suprisingly simple', 800, 4.1);
+    const menuItem6 = new MenuItem(images('./homeFood.png'), "Mikey's Spaghetti", 'Like A Can Of Whoopass', 1300, 5.0);
+    menuContainer.appendChild(menuItem1.createMenuItem());
+    menuContainer.appendChild(menuItem2.createMenuItem());
+    menuContainer.appendChild(menuItem3.createMenuItem());
+    menuContainer.appendChild(menuItem4.createMenuItem());
+    menuContainer.appendChild(menuItem5.createMenuItem());
+    menuContainer.appendChild(menuItem6.createMenuItem());
+}
 
 /***/ }),
 
@@ -18910,7 +18955,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f3531e3ae6de7d3eaf62")
+/******/ 		__webpack_require__.h = () => ("b2edcd0ccc4e38e7fba2")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
