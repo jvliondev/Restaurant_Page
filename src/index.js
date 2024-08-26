@@ -2,35 +2,32 @@ import './styles.css';
 import './home.css';
 import './contact.css';
 import './menu.css';
-import  loadHome  from './home.js';
-import  loadMenu from './menu.js';
-import  loadContact  from './contact.js';
-import './home.js'
-
-
+import loadHome from './home.js';
+import loadMenu from './menu.js';
+import loadContact from './contact.js';
 
 // Tab Switching Module
-let tabSwitchingModule = (function() {
-    const homeTab = document.querySelector(".home");
-    homeTab.addEventListener("click", ()=> {
+(function() {
+    const homeTab = document.querySelector('.home');
+    homeTab.addEventListener('click', () => {
         clearContent();
         loadHome();
     });
-    
-    const menuTab = document.querySelector(".menu");
-    menuTab.addEventListener("click", () => {
+
+    const menuTab = document.querySelector('.menu');
+    menuTab.addEventListener('click', () => {
         clearContent();
         loadMenu();
     });
 
-    const contactTab = document.querySelector(".contact");
-    contactTab.addEventListener("click", () => {
+    const contactTab = document.querySelector('.contact');
+    contactTab.addEventListener('click', () => {
         clearContent();
         loadContact();
     });
 })();
 
-function clearContent(){
+function clearContent() {
     const content = document.querySelector('#content');
     content.innerHTML = '';
 }
