@@ -1329,6 +1329,7 @@ __webpack_require__.r(__webpack_exports__);
     formDiv.appendChild(form);
 
 }
+console.log('File 3 loaded');
 
 /***/ }),
 
@@ -1387,6 +1388,7 @@ function loadHome() {
 
 
 }
+console.log('File 1 loaded');
 
 /***/ }),
 
@@ -1453,6 +1455,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 // Tab Switching Module
 let tabSwitchingModule = (function() {
     const homeTab = document.querySelector(".home");
@@ -1480,6 +1484,7 @@ function clearContent(){
 }
 
 (0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+console.log('Index file loaded');
 
 /***/ }),
 
@@ -1585,6 +1590,7 @@ function loadMenu() {
     menuContainer.appendChild(menuItem5.createMenuItem());
     menuContainer.appendChild(menuItem6.createMenuItem());
 }
+console.log('File 2 loaded');
 
 /***/ }),
 
@@ -1739,7 +1745,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f1b7902529c549fecdb5")
+/******/ 		__webpack_require__.h = () => ("75dea3172ef477568767")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

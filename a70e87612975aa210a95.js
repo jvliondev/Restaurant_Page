@@ -1329,6 +1329,7 @@ __webpack_require__.r(__webpack_exports__);
     formDiv.appendChild(form);
 
 }
+console.log('File 3 loaded');
 
 /***/ }),
 
@@ -1387,6 +1388,7 @@ function loadHome() {
 
 
 }
+console.log('File 1 loaded');
 
 /***/ }),
 
@@ -1479,7 +1481,8 @@ function clearContent(){
     content.innerHTML = '';
 }
 
-
+(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+console.log('Index file loaded');
 
 /***/ }),
 
@@ -1585,6 +1588,7 @@ function loadMenu() {
     menuContainer.appendChild(menuItem5.createMenuItem());
     menuContainer.appendChild(menuItem6.createMenuItem());
 }
+console.log('File 2 loaded');
 
 /***/ }),
 
@@ -1739,7 +1743,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("ef491ce58d073aa6429b")
+/******/ 		__webpack_require__.h = () => ("be8960faee317723c0ee")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
