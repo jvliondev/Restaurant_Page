@@ -1215,11 +1215,11 @@ module.exports = styleTagTransform;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadContact: () => (/* binding */ loadContact)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
    
    
-   function loadContact() {
+function loadContact() {
     // mainContent
     const mainContent = document.querySelector('#content');
     //h2 header "Contact Us"
@@ -1330,6 +1330,7 @@ __webpack_require__.r(__webpack_exports__);
 
 }
 console.log('File 3 loaded');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadContact);
 
 /***/ }),
 
@@ -1342,9 +1343,9 @@ console.log('File 3 loaded');
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadHome: () => (/* binding */ loadHome)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
 
 
 
@@ -1381,13 +1382,14 @@ function loadHome() {
         setTimeout(function() {
             
             clearContent();
-            (0,_menu__WEBPACK_IMPORTED_MODULE_0__.loadMenu)();
+            (0,_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
         }, 500); // Delay matches the CSS transition duration
       });
 
 
 
 }
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);
 console.log('File 1 loaded');
 
 /***/ }),
@@ -1455,26 +1457,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
 // Tab Switching Module
 let tabSwitchingModule = (function() {
     const homeTab = document.querySelector(".home");
     homeTab.addEventListener("click", ()=> {
         clearContent();
-        (0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+        (0,_home_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
     });
     
     const menuTab = document.querySelector(".menu");
     menuTab.addEventListener("click", () => {
         clearContent();
-        (0,_menu_js__WEBPACK_IMPORTED_MODULE_5__.loadMenu)();
+        (0,_menu_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
     });
 
     const contactTab = document.querySelector(".contact");
     contactTab.addEventListener("click", () => {
         clearContent();
-        (0,_contact_js__WEBPACK_IMPORTED_MODULE_6__.loadContact)();
+        (0,_contact_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
     });
 })();
 
@@ -1483,7 +1483,7 @@ function clearContent(){
     content.innerHTML = '';
 }
 
-(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+(0,_home_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
 console.log('Index file loaded');
 
 /***/ }),
@@ -1497,16 +1497,18 @@ console.log('Index file loaded');
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   loadMenu: () => (/* binding */ loadMenu)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 
-const images = __webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$");
+
 
 function loadMenu() {
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menuContainer');
-    const content1 = document.getElementById('content');
-    content1.appendChild(menuContainer);
+    const content = document.getElementById('content');
+    content.appendChild(menuContainer);
+
+    const images = __webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$");
 
     class MenuItem {
         constructor(imageSrc, title, description, calories, rating) {
@@ -1521,8 +1523,6 @@ function loadMenu() {
             const menuItem = document.createElement('div');
             menuItem.classList.add('menu-item');
 
-        
-
             const imageDiv = document.createElement('div');
             imageDiv.classList.add('image');
             imageDiv.style.backgroundImage = `url(${this.imageSrc})`;
@@ -1531,14 +1531,11 @@ function loadMenu() {
             const backgroundDiv = document.createElement('div');
             backgroundDiv.classList.add('background');
 
-            
-
             const titleDiv = document.createElement('div');
             const titleElement = document.createElement('h3');
             titleElement.textContent = this.title;
             titleElement.classList.add('menuTitle');
             titleDiv.appendChild(titleElement);
-            
 
             const descriptionDiv = document.createElement('div');
             const descriptionElement = document.createElement('p');
@@ -1551,7 +1548,6 @@ function loadMenu() {
             titleAndDescriptionDiv.appendChild(descriptionDiv);
             backgroundDiv.appendChild(titleAndDescriptionDiv);
             titleAndDescriptionDiv.classList.add('titleAndDescriptionDiv');
-            
 
             const borderShadowDiv = document.createElement('div');
             borderShadowDiv.classList.add('border-shadow');
@@ -1575,22 +1571,21 @@ function loadMenu() {
         }
     }
 
-    const content = document.getElementById('content');
+    const menuItems = [
+        new MenuItem(images('./homeFood.png'), 'King Pao Fish', 'Savory & Spicy', 250, 4.5),
+        new MenuItem(images('./beefPlate.png'), 'Spring Beef Platoon', 'Tangy and Wild', 700, 4.9),
+        new MenuItem(images('./chickenSalad.png'), 'The Michael', 'Unpleasantly Good', 200, 4.0),
+        new MenuItem(images('./homeFood.png'), "Sydney's Donut", 'Sweeping Delightful', 300, 4.4),
+        new MenuItem(images('./homeFood.png'), 'The Chocolate Banana', 'Surprisingly simple', 800, 4.1),
+        new MenuItem(images('./homeFood.png'), "Mikey's Spaghetti", 'Like A Can Of Whoopass', 1300, 5.0)
+    ];
 
-    const menuItem1 = new MenuItem(images('./homeFood.png'), 'King Pao Fish', 'Savory & Spicy', 250, 4.5);
-    const menuItem2 = new MenuItem(images('./beefPlate.png'), 'Spring Beef Platoon', 'Tangy and Wild', 700, 4.9);
-    const menuItem3 = new MenuItem(images('./chickenSalad.png'), 'The Michael', 'Unpleasantly Good', 200, 4.0);
-    const menuItem4 = new MenuItem(images('./homeFood.png'), "Sydney's Donut", 'Sweeping Delightful', 300, 4.4);
-    const menuItem5 = new MenuItem(images('./homeFood.png'), 'The Chocolate Banana', 'Suprisingly simple', 800, 4.1);
-    const menuItem6 = new MenuItem(images('./homeFood.png'), "Mikey's Spaghetti", 'Like A Can Of Whoopass', 1300, 5.0);
-    menuContainer.appendChild(menuItem1.createMenuItem());
-    menuContainer.appendChild(menuItem2.createMenuItem());
-    menuContainer.appendChild(menuItem3.createMenuItem());
-    menuContainer.appendChild(menuItem4.createMenuItem());
-    menuContainer.appendChild(menuItem5.createMenuItem());
-    menuContainer.appendChild(menuItem6.createMenuItem());
+    menuItems.forEach(item => menuContainer.appendChild(item.createMenuItem()));
 }
+
 console.log('File 2 loaded');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMenu);
+
 
 /***/ }),
 
@@ -1745,7 +1740,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a999d9044afdaa5ae400")
+/******/ 		__webpack_require__.h = () => ("7066fc1936a560d16d0f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
