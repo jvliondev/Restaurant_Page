@@ -1,7 +1,7 @@
-import { loadMenu } from "./menu";
+import  loadMenu from "./menu.js";
 
 
-export function loadHome() {
+function loadHome() {
     const mainContent = document.querySelector('#content');
     const createH1Div = document.createElement('div');
     const h1Slogan = document.createElement('h1');
@@ -41,4 +41,5 @@ export function loadHome() {
 
 
 }
+export default loadHome;
 console.log('File 1 loaded');

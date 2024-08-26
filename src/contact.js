@@ -1,6 +1,6 @@
    
    
-   export function loadContact() {
+function loadContact() {
     // mainContent
     const mainContent = document.querySelector('#content');
     //h2 header "Contact Us"
@@ -111,3 +111,4 @@
 
 }
 console.log('File 3 loaded');
+export default loadContact;
