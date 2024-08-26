@@ -13,6 +13,7 @@ module.exports = {
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/Restaurant_Page/', // Adjust this for GitHub Pages
         clean: true,
     },
     devtool: "source-map",
@@ -34,6 +35,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
@@ -44,16 +55,6 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
             },
         ],
     },
