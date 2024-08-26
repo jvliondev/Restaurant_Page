@@ -89,3 +89,4 @@ export function loadMenu() {
     menuContainer.appendChild(menuItem5.createMenuItem());
     menuContainer.appendChild(menuItem6.createMenuItem());
 }
+console.log('File 2 loaded');

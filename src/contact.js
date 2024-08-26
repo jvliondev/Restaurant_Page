@@ -110,3 +110,4 @@
     formDiv.appendChild(form);
 
 }
+console.log('File 3 loaded');

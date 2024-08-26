@@ -41,3 +41,4 @@ export function loadHome() {
 
 
 }
+console.log('File 1 loaded');

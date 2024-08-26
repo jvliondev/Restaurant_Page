@@ -5,7 +5,9 @@ import "./menu.css";
 import { loadHome } from "./home.js";
 import { loadMenu } from './menu.js';
 import { loadContact } from './contact.js';
-
+import "./home.js";
+import './menu.js';
+import './contact.js';
 
 
 
@@ -36,3 +38,4 @@ function clearContent(){
 }
 
 loadHome();
+console.log('Index file loaded');
