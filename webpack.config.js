@@ -13,7 +13,7 @@ module.exports = {
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/Restaurant_Page/', // Adjust this for GitHub Pages
+        
         clean: true,
     },
     devtool: "source-map",
