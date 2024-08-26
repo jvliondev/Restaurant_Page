@@ -8,6 +8,9 @@ module.exports = {
     mode: "development",
     entry: './src/index.js',
     output: {
+        
+        libraryTarget: 'commonjs2',
+
         filename: "main.js",
         path: path.resolve(__dirname, 'dist'),
         clean: true,

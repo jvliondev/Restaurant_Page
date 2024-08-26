@@ -1,7 +1,7 @@
 import { loadMenu } from "./menu";
 
 
-export default function loadHome() {
+export function loadHome() {
     const mainContent = document.querySelector('#content');
     const createH1Div = document.createElement('div');
     const h1Slogan = document.createElement('h1');
