@@ -1,15 +1,15 @@
 {
   "name": "restaurant_page",
   "version": "1.0.0",
-  "description": "",
+  "description": "A restaurant page project",
   "main": "index.js",
   "scripts": {
-    
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --hot"
+    "start": "webpack serve --hot",
+    "clean": "rm -rf dist"
   },
-  "author": "",
+  "author": "Julian Vasquez",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",
