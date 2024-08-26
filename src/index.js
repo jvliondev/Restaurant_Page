@@ -35,3 +35,4 @@ function clearContent(){
     content.innerHTML = '';
 }
 
+loadHome();
