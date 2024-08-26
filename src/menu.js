@@ -1,7 +1,7 @@
 import { create } from "lodash";
 const images = require.context('./images', false, /\.(png|jpe?g|gif)$/);
 
-export function loadMenu() {
+export default function loadMenu() {
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menuContainer');
     const content1 = document.getElementById('content');

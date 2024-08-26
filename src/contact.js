@@ -1,4 +1,4 @@
-export function loadContact() {
+export default function loadContact() {
     // mainContent
     const mainContent = document.querySelector('#content');
     //h2 header "Contact Us"
