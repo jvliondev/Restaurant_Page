@@ -1478,7 +1478,7 @@ function clearContent(){
     const content = document.querySelector('#content');
     content.innerHTML = '';
 }
-(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
+
 
 
 /***/ }),
@@ -1739,7 +1739,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("2a31e5a4d4be2168ff03")
+/******/ 		__webpack_require__.h = () => ("ef491ce58d073aa6429b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

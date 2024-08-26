@@ -1479,7 +1479,7 @@ function clearContent(){
     content.innerHTML = '';
 }
 
-
+(0,_home_js__WEBPACK_IMPORTED_MODULE_4__.loadHome)();
 
 /***/ }),
 
@@ -1739,7 +1739,7 @@ module.exports = __webpack_require__.p + "9a872e67965ba8aaa540.png";
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("cd19116c475add5b49f0")
+/******/ 		__webpack_require__.h = () => ("f1b7902529c549fecdb5")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
